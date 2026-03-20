@@ -14,7 +14,7 @@
     <script src="libs/freezeframe/freezeframe.min.js"></script>
     <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
     <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":".freeze-gif","trigger":"click","overlay":true,"responsive":true,"warnings":true}</script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xeb95643ea3d4b3699fb2ff4efe2f146","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbd15e30a8b747059034ebdc8b18ee58","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -228,11 +228,41 @@ All of these seem huge, but the good thing is that each of these can be parallel
 
 ???
 
-I tested three different turbulence models: a sinusoidal model, the Dryden model, and the Vonkarman model.  Dryden and Vonkarman models have temporal correlation between the turbulence's velocity at different times while the sinusoidal model is temporally uncorrelated.
+I tested three different turbulence models: a sinusoidal model, the Dryden model, and the Von Karman model. Dryden and Von Karman models have temporal correlation between the turbulence velocity at different times, while the sinusoidal model is temporally uncorrelated.
 
 --
 
-![:img 70%, 15%, 20%](../figs/noise.png)
+&lt;div style="position: relative; height: 350px;"&gt;
+
+  &lt;!-- Image 1 --&gt;
+  &lt;img src="../figs/sinusoidal_pdf_psd.png"
+       style="position:absolute; left:0%; top:20%; width:35%; cursor:pointer;"
+       onclick="playAudio('audio1')"&gt;
+
+  &lt;!-- Image 2 --&gt;
+  &lt;img src="../figs/dryden_pdf_psd.png"
+       style="position:absolute; left:37%; top:20%; width:35%; cursor:pointer;"
+       onclick="playAudio('audio2')"&gt;
+
+  &lt;!-- Image 3 --&gt;
+  &lt;img src="../figs/von_kármán_pdf_psd.png"
+       style="position:absolute; left:70%; top:20%; width:35%; cursor:pointer;"
+       onclick="playAudio('audio3')"&gt;
+
+&lt;/div&gt;
+
+&lt;audio id="audio1" src="../figs/sinusoidal.wav"&gt;&lt;/audio&gt;
+&lt;audio id="audio2" src="../figs/dryden.wav"&gt;&lt;/audio&gt;
+&lt;audio id="audio3" src="../figs/vonkarman.wav"&gt;&lt;/audio&gt;
+
+&lt;script&gt;
+function playAudio(id) {
+  const audio = document.getElementById(id);
+  audio.currentTime = 0;   // restart from beginning on each click
+  audio.play();
+}
+&lt;/script&gt;
+
 ---
 # Time History
 
