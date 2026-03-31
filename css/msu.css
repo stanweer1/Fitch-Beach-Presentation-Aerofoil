@@ -150,7 +150,7 @@ thead, tfoot, tr:nth-child(even) { background: none; }
 } */
 
 .title-slide {
-  background-image: url("../xaringan/Figs/title_graphic.gif"),
+  background-image: url("../figs/title_graphic.gif"),
                     url(https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg)/*,
                     url("../xaringan/Figs/white_block.png")*/;
   background-position: 97% 75%, 10% 95%, 100% 50%;
